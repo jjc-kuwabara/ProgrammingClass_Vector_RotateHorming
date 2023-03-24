@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
         m_moveDistance = m_moveDirection * m_speed * Time.deltaTime;
 
@@ -32,9 +32,9 @@ public class Bullet : MonoBehaviour
     }
 
     public float m_speed;
-    GameObject m_targetObject;
+    protected GameObject m_targetObject;
     [SerializeField]
-    Vector3 m_moveDirection;
+    protected Vector3 m_moveDirection;
     [SerializeField]
-    Vector3 m_moveDistance;
+    protected Vector3 m_moveDistance;
 }
